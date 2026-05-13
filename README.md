@@ -103,3 +103,21 @@ npm run dev
 ## Author
 
 Aarushi Singh
+
+
+## Screenshots
+
+### Landing Page
+![Landing Page](screenshots/landing-page.png)
+
+### Interest Selection
+![Interest Selection](screenshots/interest-selection.png)
+
+### Reflection Dashboard
+![Reflection Dashboard](screenshots/reflection-dashboard.png)
+
+### Cognitive Analysis
+![Cognitive Analysis](screenshots/cognitive-analysis.png)
+
+### Trend Dashboard
+![Trend Dashboard](screenshots/trend-dashboard.png)
