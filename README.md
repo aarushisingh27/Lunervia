@@ -58,7 +58,7 @@ vite.config.ts
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/lunervia.git
+git clone https://github.com/aarushisingh27/Lunervia.git
 ```
 
 ### 2. Install Dependencies
