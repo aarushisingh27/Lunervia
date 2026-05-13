@@ -100,10 +100,6 @@ npm run dev
 
 ---
 
-## Author
-
-Aarushi Singh
-
 
 ## Screenshots
 
@@ -121,3 +117,8 @@ Aarushi Singh
 
 ### Trend Dashboard
 ![Trend Dashboard](screenshots/trend-dashboard.png)
+
+
+## Author
+
+Aarushi Singh
