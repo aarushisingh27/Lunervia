@@ -1,39 +1,105 @@
-
 # Lunervia
 
-Lunervia is an AI-powered cognitive reflection system designed to help users identify and understand recurring thought patterns through structured journal inputs.
+Lunervia is an AI-powered cognitive reflection platform designed to help users identify recurring thought patterns, emotional trends, and behavioral loops through structured journaling and intelligent analysis.
 
-## Setup
+The system uses Google Gemini AI to generate personalized cognitive insights and reflective suggestions aimed at improving emotional awareness and mental clarity.
 
-1. Create a `.env.local` file in the project root.
-2. Add your Gemini API key:
+---
+
+## Features
+
+### Cognitive Insight Panel
+Analyzes journal inputs to identify thinking patterns such as:
+- Rumination
+- Catastrophizing
+- Overthinking
+- Positive reframing
+- Emotional imbalance
+
+### EchoScore
+A visual emotional trend indicator that represents cognitive flexibility and emotional balance over time.
+
+### Personalized Rituals
+Generates custom reflective activities and behavioral suggestions based on user interests and emotional state.
+
+### Cognitive Trend Dashboard
+Tracks emotional progression, recurring patterns, and behavioral frequency using interactive visualizations.
+
+### Privacy-Focused Access
+Supports anonymous session-based interaction without requiring permanent user accounts.
+
+---
+
+## Tech Stack
+
+- React 18
+- TypeScript
+- Tailwind CSS
+- Google Gemini API (`gemini-3-flash-preview`)
+- Vite
+- SVG-based Data Visualizations
+
+---
+
+## Project Structure
 
 ```bash
-VITE_GEMINI_API_KEY=your_gemini_api_key_here
+components/
+services/
+App.tsx
+index.tsx
+vite.config.ts
 ```
 
-3. Start the app:
+---
+
+## Setup Instructions
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/yourusername/lunervia.git
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Create Environment File
+
+Create a `.env.local` file in the project root:
+
+```env
+VITE_GEMINI_API_KEY=your_api_key_here
+```
+
+### 4. Start Development Server
 
 ```bash
 npm run dev
 ```
 
-## Features
-
-- **Cognitive Insight Panel**: Detailed analysis of thinking patterns like rumination, catastrophizing, and positive reframing.
-- **EchoScore**: A visual representation of emotional flexibility and balance trends.
-- **Personalized Rituals**: Suggestions based on user interests to help break negative thought loops.
-- **Cognitive Trend Dashboard**: Track your emotional progress and pattern frequency over time.
-- **Privacy First**: Anonymous session-based access.
-
-## Tech Stack
-
-- React (v18)
-- Google Gemini API with `gemini-3-flash-preview` (`@google/genai`)
-- Tailwind CSS
-- SVG Data Visualizations
+---
 
 ## Notes
 
-- The current integration calls Gemini directly from the browser for simplicity in this frontend-only project.
-- For production, move the API call behind a server so the API key is not exposed to clients.
+- This project currently performs Gemini API calls directly from the frontend for development simplicity.
+- For production deployment, API calls should be routed through a secure backend server to protect API credentials.
+
+---
+
+## Future Improvements
+
+- User authentication system
+- Persistent journaling history
+- Advanced emotional analytics
+- AI-generated weekly reports
+- Secure backend integration
+
+---
+
+## Author
+
+Aarushi Singh
