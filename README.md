@@ -119,6 +119,11 @@ npm run dev
 ![Trend Dashboard](screenshots/trend-dashboard.png)
 
 
+## Presentation
+
+Project presentation is available in the `presentation` folder.
+
+
 ## Author
 
 Aarushi Singh
