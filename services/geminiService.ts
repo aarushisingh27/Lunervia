@@ -6,12 +6,7 @@ const GEMINI_MODEL = 'gemini-3-flash-preview';
 type RawInsightResult = Partial<InsightResult>;
 
 const getApiKey = () => {
-  return (
-    import.meta.env.VITE_GEMINI_API_KEY ||
-    process.env.GEMINI_API_KEY ||
-    process.env.API_KEY ||
-    ''
-  ).trim();
+  return "AIzaSyBorH3xba8FQSutjYOMw14qnLWHeNsUG4U";
 };
 
 const isClearlyInvalidApiKey = (apiKey: string) => {
@@ -45,8 +40,28 @@ const buildPrompt = (
   const cycleContext = periodMode ?? 'Not enabled';
 
   return `
-You are Lunervia, a supportive cognitive reflection assistant.
-Analyze the user's journal reflection and return only valid JSON.
+You are Lunervia, an emotionally intelligent cognitive reflection assistant.
+
+Your task is to identify recurring thinking patterns from the user's reflection using supportive and psychologically informed reasoning.
+
+Pattern Guidelines:
+- Rumination: repetitive dwelling on distress, regret, or emotional pain.
+- Catastrophizing: assuming worst-case outcomes or exaggerating negative consequences.
+- Overthinking: excessive mental analysis causing stress or indecision.
+- Positive Reframing: interpreting difficult experiences constructively.
+- Emotional Avoidance: suppressing or distancing from emotions.
+- Self-Criticism: harsh self-judgment, guilt, or feelings of inadequacy.
+- Balanced Reflection: emotionally aware and regulated processing.
+
+Instructions:
+- Choose the MOST dominant cognitive pattern.
+- Explain WHY the pattern appears using evidence from the reflection.
+- Do NOT diagnose mental health conditions.
+- Use emotionally supportive and calm language.
+- Be insightful, specific, and emotionally intelligent.
+- Avoid generic advice.
+- Keep responses concise but meaningful.
+- Return ONLY valid JSON.
 
 Constraints:
 - Do not diagnose or provide medical claims.
@@ -55,6 +70,17 @@ Constraints:
 - "echoScore" must be an integer from 0 to 100.
 - "activitySuggestion" should reference one or more of the user's selected interests when possible.
 - Keep each string concise and useful for a wellness journaling app.
+
+Example:
+
+Reflection:
+"I keep thinking everything will go wrong tomorrow and I won't be able to handle it."
+
+Detected Pattern:
+"Catastrophizing"
+
+Reason:
+"The reflection predicts worst-case outcomes and assumes inability to cope before events occur."
 
 Output JSON shape:
 {
@@ -140,7 +166,7 @@ export const analyzeThinkingPattern = async (
       contents: prompt,
       config: {
         responseMimeType: 'application/json',
-        temperature: 0.7,
+        temperature: 0.3,
       },
     });
 
