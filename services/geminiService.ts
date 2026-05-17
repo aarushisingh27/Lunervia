@@ -6,8 +6,8 @@ const GEMINI_MODEL = 'gemini-3-flash-preview';
 type RawInsightResult = Partial<InsightResult>;
 
 const getApiKey = () => {
-  return "AIzaSyBorH3xba8FQSutjYOMw14qnLWHeNsUG4U";
-};
+  return import.meta.env.VITE_GEMINI_API_KEY || '';
+  };
 
 const isClearlyInvalidApiKey = (apiKey: string) => {
   const normalized = apiKey.trim().toLowerCase();
